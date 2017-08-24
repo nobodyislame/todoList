@@ -13,12 +13,14 @@ class TodoInput extends Component{
       done : false
     });
     this.props.onNewTodo(this.props.todoList);
+    this.setState({ todo : '' });
   }
   render(){
     return (
       <div className="row todo-input">
         <div className="col-md-8">
           <input
+            value = {this.state.todo}
             className="form-control"
             onChange={event=>{this.setState({todo : event.target.value})}}
           />
