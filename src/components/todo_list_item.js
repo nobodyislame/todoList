@@ -10,6 +10,10 @@ const TodoListItem = (props)=>{
     }
     props.onTodoDone(props.todoList);
   }
+  const deleteTodo = ()=>{
+    props.todoList.splice(props.splice-1,1);
+    props.onTodoDone(props.todoList);
+  }
   return (
     <li className="list-group-item">
       <div className="row">
@@ -30,6 +34,7 @@ const TodoListItem = (props)=>{
         <div className="col-md-2">
           <button
             className="btn btn-danger"
+            onClick={deleteTodo}
           >
             Delete
           </button>
