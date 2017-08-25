@@ -11,7 +11,7 @@ const TodoListItem = (props)=>{
     props.onTodoDone(props.todoList);
   }
   const deleteTodo = ()=>{
-    props.todoList.splice(props.splice-1,1);
+    props.todoList.splice(props.serial-1,1);
     props.onTodoDone(props.todoList);
   }
   return (

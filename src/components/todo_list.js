@@ -3,11 +3,11 @@ import TodoListItem from './todo_list_item';
 
 const TodoList = (props)=>{
 
-  let todoList = props.todoList;
+  // let todoList = props.todoList;
   let todoItems = props.todoList.map((todo, index)=>{
     return <TodoListItem
               todoItem={todo}
-              todoList={todoList}
+              todoList={props.todoList}
               serial={index+1}
               key={index}
               onTodoDone={props.onTodoDone} />
