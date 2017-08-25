@@ -18,7 +18,7 @@ class App extends Component {
     return(
       <div>
         <TodoInput onNewTodo = { todos=>{this.setState({todos})} } todoList={this.state.todos} />
-        <TodoList todoList={this.state.todos} />
+        <TodoList todoList={this.state.todos} onTodoDone={todos=>{this.setState({todos})}} />
       </div>
     );
   }
