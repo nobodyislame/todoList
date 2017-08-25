@@ -8,10 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      todos : [
-        {todo : 'Todo1', done : false},
-        {todo : 'Todo2', done : false}
-      ]
+      todos : []
     }
   }
   render(){
