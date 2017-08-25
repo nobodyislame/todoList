@@ -2,7 +2,12 @@ import React from 'react';
 
 const TodoListItem = (props)=>{
   const completed = ()=>{
-    props.todoList[props.serial-1].done = true;
+    if(!props.todoItem.done){
+      props.todoList[props.serial-1].done = true;
+    }
+    else{
+      props.todoList[props.serial-1].done = false;
+    }
     props.onTodoDone(props.todoList);
   }
   return (
@@ -16,10 +21,10 @@ const TodoListItem = (props)=>{
         </div>
         <div className="col-md-2">
           <button
-            className="btn btn-success"
+            className="btn btn-default"
             onClick={completed}
             >
-            Completed
+            {!props.todoItem.done?'Mark Done': 'Mark Undone'}
           </button>
         </div>
         <div className="col-md-2">
