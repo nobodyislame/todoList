@@ -1,7 +1,15 @@
 .todo-input{
   margin: 20px 0 20px 0;
+  display: fixed;
 }
 
 .done{
   text-decoration: line-through;
+}
+
+.footer{
+  left:40%;
+  bottom: 10px;
+  position: fixed;
+  display: block;
 }
