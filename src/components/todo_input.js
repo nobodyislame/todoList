@@ -18,14 +18,15 @@ class TodoInput extends Component{
   render(){
     return (
       <div className="row todo-input">
-        <div className="col-md-8">
+        <div className="col-md-10">
           <input
+            placeholder="Enter todo"
             value = {this.state.todo}
             className="form-control"
             onChange={event=>{this.setState({todo : event.target.value})}}
           />
         </div>
-        <div className="col-md-4">
+        <div className="col-md-2">
           <button
             className="btn btn-primary btn-block"
             onClick={()=>{this.onTodoAdd()}}>
